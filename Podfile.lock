@@ -1,0 +1,19 @@
+PODS:
+  - NorthLayout (2.0.0)
+
+DEPENDENCIES:
+  - NorthLayout (from `https://github.com/banjun/NorthLayout.git`)
+
+EXTERNAL SOURCES:
+  NorthLayout:
+    :git: https://github.com/banjun/NorthLayout.git
+
+CHECKOUT OPTIONS:
+  NorthLayout:
+    :commit: f84011e73a6b1b91ee2d66298cc95c4d487ce41b
+    :git: https://github.com/banjun/NorthLayout.git
+
+SPEC CHECKSUMS:
+  NorthLayout: cb23c00efe2b10f3d2b80c2094fa46b7f11e89e2
+
+COCOAPODS: 0.38.2
