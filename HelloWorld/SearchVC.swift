@@ -134,6 +134,27 @@ extension  SearchVC: UITableViewDataSource {
 			return 0
 		}
 	}
+	
+	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		let row = indexPath.row
+		if let fData = filterdData {
+			let data = fData[row]
+			let detailVC = BookDetailVC()
+			
+			detailVC.initViews()
+			
+			detailVC.categoryLabel.text = data.category
+			detailVC.levelLabel.text = data.level?.toString()
+			detailVC.titleLabel.text = data.title
+			detailVC.authorLabel.text = data.author
+			detailVC.urlLabel.text = data.url?.absoluteString
+			detailVC.reviewLabel.text = data.review
+			
+			detailVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+			detailVC.modalPresentationStyle = UIModalPresentationStyle.CurrentContext
+			self.presentViewController(detailVC, animated: true, completion: nil)
+		}
+	}
 }
 
 extension SearchVC: UITextFieldDelegate {
