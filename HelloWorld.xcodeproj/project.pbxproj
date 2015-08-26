@@ -15,6 +15,7 @@
 		9B2090411B8CC0190078039F /* HelloWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2090401B8CC0190078039F /* HelloWorldUITests.swift */; };
 		9B2090511B8CC51F0078039F /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2090501B8CC51F0078039F /* SearchVC.swift */; };
 		9B2090531B8CC52C0078039F /* MyStudyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2090521B8CC52C0078039F /* MyStudyVC.swift */; };
+		9B7AACAC1B8D90F8006B900C /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7AACAB1B8D90F8006B900C /* PlaceHolderTextView.swift */; };
 		9BA409C21B8CCA0A008A18DB /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BA409C11B8CCA0A008A18DB /* Launch Screen.xib */; };
 		9BA409C41B8CD1D6008A18DB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA409C31B8CD1D6008A18DB /* Data.swift */; };
 		9BA409C61B8CD227008A18DB /* MyStudyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA409C51B8CD227008A18DB /* MyStudyTableCell.swift */; };
@@ -22,6 +23,7 @@
 		9BBBE2481B8D79A600006A5A /* book-cover-tick-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BBBE2451B8D79A600006A5A /* book-cover-tick-7.png */; };
 		9BBBE2491B8D79A600006A5A /* plus-simple-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BBBE2461B8D79A600006A5A /* plus-simple-7.png */; };
 		9BBBE24A1B8D79A600006A5A /* search-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BBBE2471B8D79A600006A5A /* search-7.png */; };
+		9BBBE24E1B8D816000006A5A /* AddTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBBE24D1B8D816000006A5A /* AddTableVC.swift */; };
 		CE30B6C414C274A9F4BCB7C1 /* Pods_HelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEDDE855311FEB6174E360F /* Pods_HelloWorld.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,7 @@
 		9B2090421B8CC0190078039F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B2090501B8CC51F0078039F /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		9B2090521B8CC52C0078039F /* MyStudyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStudyVC.swift; sourceTree = "<group>"; };
+		9B7AACAB1B8D90F8006B900C /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
 		9BA409C11B8CCA0A008A18DB /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		9BA409C31B8CD1D6008A18DB /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		9BA409C51B8CD227008A18DB /* MyStudyTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStudyTableCell.swift; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		9BBBE2451B8D79A600006A5A /* book-cover-tick-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "book-cover-tick-7.png"; path = "images/book-cover-tick-7.png"; sourceTree = "<group>"; };
 		9BBBE2461B8D79A600006A5A /* plus-simple-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "plus-simple-7.png"; path = "images/plus-simple-7.png"; sourceTree = "<group>"; };
 		9BBBE2471B8D79A600006A5A /* search-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "search-7.png"; path = "images/search-7.png"; sourceTree = "<group>"; };
+		9BBBE24D1B8D816000006A5A /* AddTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableVC.swift; sourceTree = "<group>"; };
 		9DEDDE855311FEB6174E360F /* Pods_HelloWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8079D61A1219CACCFAB5711 /* Pods-HelloWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,9 +144,11 @@
 			children = (
 				9BA409C31B8CD1D6008A18DB /* Data.swift */,
 				9B2090201B8CC0190078039F /* AppDelegate.swift */,
+				9B7AACAB1B8D90F8006B900C /* PlaceHolderTextView.swift */,
 				9B2090501B8CC51F0078039F /* SearchVC.swift */,
 				9B2090521B8CC52C0078039F /* MyStudyVC.swift */,
 				9BA409C51B8CD227008A18DB /* MyStudyTableCell.swift */,
+				9BBBE24D1B8D816000006A5A /* AddTableVC.swift */,
 				9BBBE2421B8D272800006A5A /* BookDetailVC.swift */,
 				9B2090221B8CC0190078039F /* ViewController.swift */,
 				9B2090241B8CC0190078039F /* Main.storyboard */,
@@ -370,7 +376,9 @@
 				9BA409C61B8CD227008A18DB /* MyStudyTableCell.swift in Sources */,
 				9B2090231B8CC0190078039F /* ViewController.swift in Sources */,
 				9BBBE2431B8D272800006A5A /* BookDetailVC.swift in Sources */,
+				9BBBE24E1B8D816000006A5A /* AddTableVC.swift in Sources */,
 				9B2090531B8CC52C0078039F /* MyStudyVC.swift in Sources */,
+				9B7AACAC1B8D90F8006B900C /* PlaceHolderTextView.swift in Sources */,
 				9B2090211B8CC0190078039F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

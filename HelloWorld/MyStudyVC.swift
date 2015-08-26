@@ -67,6 +67,14 @@ class MyStudyVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 		addButton?.layer.borderWidth = 2.0
 	}
 	
+	func addTable(sender: UIButton) {
+		// goto addView
+		let addTableVC = AddTableVC()
+		addTableVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+		addTableVC.modalPresentationStyle = UIModalPresentationStyle.CurrentContext
+		self.presentViewController(addTableVC, animated: true, completion: nil)
+	}
+	
 	func setupAutoLayout() {
 		let p: CGFloat = 8
 		let b: CGFloat = 60
