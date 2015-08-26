@@ -34,13 +34,14 @@ class  AddTableVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, 
 		setupTextFields()
 		setupLevelButton()
 		setupReviewField()
+		setupCancelButton()
+		setupAddButton()
 		
 		setupAutoLayout()
 	}
 	
 	func setupLevelButton() {
 		levelButton.setTitle("Level", forState: .Normal)
-		levelButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
 		levelButton.addTarget(self, action: "showLevelPicker:", forControlEvents: .TouchUpInside)
 		levelButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
 	}
@@ -98,12 +99,38 @@ class  AddTableVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, 
 	func addTable(sender: UIButton) {
 		var newStudy = StudyData()
 		newStudy.category = categoryField.text
-//		TODO: String -> Level
-//		newStudy.level = levelButton.titleLabel?.text
+		newStudy.level = toLevel(levelButton.titleLabel?.text)
 		newStudy.title = titleField.text
 		newStudy.author = authorField.text
 		newStudy.url = NSURL(string: urlField.text)
 		newStudy.review = reviewField.text
+		
+		studyData.append(newStudy)
+		
+		
+		//close this view to back to myStudyVC
+		self.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+		self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+	}
+	
+	private func toLevel(string: String?) -> Level? {
+		if let str = string {
+			switch str {
+			case "Beginner":
+				return .Beginner
+			case "Intermediate":
+				return .Intermediate
+			case "Senior":
+				return .Senior
+			case "Pro":
+				return .Pro
+			default:
+				return nil
+			}
+		}
+		else {
+			return nil
+		}
 	}
 	
 	func setupAutoLayout() {
@@ -117,14 +144,18 @@ class  AddTableVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, 
 			"author": authorField,
 			"url": urlField,
 			"review": reviewField,
+			"cancel": cancelButton,
+			"add": addButton,
 			])
 		autolayout("H:|-p-[category]-p-[level(==buttonW)]-p-|")
 		autolayout("H:|-p-[title]-p-|")
 		autolayout("H:|-p-[author]-p-|")
 		autolayout("H:|-p-[url]-p-|")
 		autolayout("H:|-p-[review]-p-|")
+		autolayout("H:|-p-[cancel(<=buttonW)]-p-[add(<=buttonW)]-p-|")
 		
-		autolayout("V:|-t-[category]-p-[title]-p-[author]-p-[url]-p-[review]-p-|")
+		autolayout("V:|-t-[category]-p-[title]-p-[author]-p-[url]-p-[review]-p-[cancel]-p-|")
+		autolayout("V:|-t-[category]-p-[title]-p-[author]-p-[url]-p-[review]-p-[add]-p-|")
 		autolayout("V:|-t-[level]")
 	}
 

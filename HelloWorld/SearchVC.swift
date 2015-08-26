@@ -108,10 +108,12 @@ extension  SearchVC: UITableViewDataSource {
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell: MyStudyTableCell = tableview.dequeueReusableCellWithIdentifier("studyCell", forIndexPath: indexPath) as! MyStudyTableCell
 		
-		cell.initViews()
-		
 		if let fData = filterdData {
 			let data = fData[indexPath.row]
+			cell.bookImage = data.image
+			
+			cell.initViews()
+			
 			cell.categoryLabel.text = data.category
 			cell.levelLabel.text = data.level?.toString()
 			cell.titleLabel.text = data.title

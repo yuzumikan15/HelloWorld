@@ -26,6 +26,11 @@ class MyStudyVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 		super.init(coder: aDecoder)
 	}
 	
+	override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated)
+		tableview.reloadData()
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
@@ -99,9 +104,12 @@ extension MyStudyVC: UITableViewDataSource {
 
 		let cell: MyStudyTableCell = tableview.dequeueReusableCellWithIdentifier("studyCell", forIndexPath: indexPath) as! MyStudyTableCell
 		
-		cell.initViews()
 		
 		let data = studyData[indexPath.row]
+		cell.bookImage = data.image
+		
+		cell.initViews()
+		
 		cell.categoryLabel.text = data.category
 		cell.levelLabel.text = data.level?.toString()
 		cell.titleLabel.text = data.title
@@ -123,6 +131,8 @@ extension MyStudyVC: UITableViewDataSource {
 		let row = indexPath.row
 		let data = studyData[row]
 		let detailVC = BookDetailVC()
+		
+		detailVC.bookImageView.image = data.image
 		
 		detailVC.initViews()
 		

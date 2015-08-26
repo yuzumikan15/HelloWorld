@@ -11,6 +11,9 @@ import UIKit
 import NorthLayout
 
 class BookDetailVC: UIViewController {
+	let width = UIScreen.mainScreen().bounds.width
+	let height = UIScreen.mainScreen().bounds.height
+	
 	lazy var bookImageView = UIImageView()
 	lazy var categoryLabel = UILabel()
 	lazy var levelLabel = UILabel()
@@ -46,8 +49,6 @@ class BookDetailVC: UIViewController {
 	}
 	
 	func setupNavBar() {
-		navBar.backgroundColor = UIColor.blueColor()
-		
 		let backButton = UIButton()
 		setupBackButton(backButton)
 		
@@ -61,24 +62,25 @@ class BookDetailVC: UIViewController {
 	
 	func setupBackButton(button: UIButton) {
 		button.setTitle("Back", forState: .Normal)
-		button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+		button.setTitleColor(UIColor.blueColor(), forState: .Normal)
 		button.addTarget(self, action: "backToMyStudyVC:", forControlEvents: .TouchUpInside)
 	}
 	
 	func setupNavBarAutoLayout(button: UIButton) {
 		let p: CGFloat = 8
 		let v: CGFloat = 2
-//		let buttonW: CGFloat = navBar.
-		let autolayout = navBar.northLayoutFormat(["p": p, "v": v], [
+		let backWidth: CGFloat = width / 5
+		let autolayout = navBar.northLayoutFormat(["p": p, "v": v, "backWidth": backWidth], [
 			"back": button,
 			"category": categoryLabel,
 			"level": levelLabel,
 		])
 		
-		autolayout("H:|-p-[back][category]-p-[level]-p-|")
+		autolayout("H:|-p-[back(==backWidth)]")
+		autolayout("H:[category]-p-[level]-p-|")
 		autolayout("V:|-v-[back]-v-|")
 		autolayout("V:|-v-[category]-v-|")
-		autolayout("V:[level]-v-|")
+		autolayout("V:|-v-[level]-v-|")
 		categoryLabel.center.x = navBar.center.x
 	}
 	

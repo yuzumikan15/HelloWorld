@@ -11,6 +11,8 @@ import UIKit
 import NorthLayout
 
 class MyStudyTableCell: UITableViewCell {
+	var bookImage: UIImage?
+	
 	lazy var bookImageView = UIImageView()
 	lazy var categoryLabel = UILabel()
 	lazy var levelLabel = UILabel()
@@ -21,7 +23,7 @@ class MyStudyTableCell: UITableViewCell {
 	
 	func initViews() {
 		// imageView
-		if let image = UIImage(named: "dummy") {
+		if let image = bookImage {
 			bookImageView.image = image
 		}
 		else {

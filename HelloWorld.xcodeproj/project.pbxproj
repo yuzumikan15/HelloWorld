@@ -16,6 +16,9 @@
 		9B2090511B8CC51F0078039F /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2090501B8CC51F0078039F /* SearchVC.swift */; };
 		9B2090531B8CC52C0078039F /* MyStudyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2090521B8CC52C0078039F /* MyStudyVC.swift */; };
 		9B7AACAC1B8D90F8006B900C /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7AACAB1B8D90F8006B900C /* PlaceHolderTextView.swift */; };
+		9B7AACB01B8E038A006B900C /* haskell.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9B7AACAD1B8E038A006B900C /* haskell.jpeg */; };
+		9B7AACB11B8E038A006B900C /* ocaml1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B7AACAE1B8E038A006B900C /* ocaml1.jpg */; };
+		9B7AACB21B8E038A006B900C /* ocaml2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B7AACAF1B8E038A006B900C /* ocaml2.jpg */; };
 		9BA409C21B8CCA0A008A18DB /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BA409C11B8CCA0A008A18DB /* Launch Screen.xib */; };
 		9BA409C41B8CD1D6008A18DB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA409C31B8CD1D6008A18DB /* Data.swift */; };
 		9BA409C61B8CD227008A18DB /* MyStudyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA409C51B8CD227008A18DB /* MyStudyTableCell.swift */; };
@@ -61,6 +64,9 @@
 		9B2090501B8CC51F0078039F /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		9B2090521B8CC52C0078039F /* MyStudyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStudyVC.swift; sourceTree = "<group>"; };
 		9B7AACAB1B8D90F8006B900C /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
+		9B7AACAD1B8E038A006B900C /* haskell.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = haskell.jpeg; path = images/haskell.jpeg; sourceTree = "<group>"; };
+		9B7AACAE1B8E038A006B900C /* ocaml1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ocaml1.jpg; path = images/ocaml1.jpg; sourceTree = "<group>"; };
+		9B7AACAF1B8E038A006B900C /* ocaml2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ocaml2.jpg; path = images/ocaml2.jpg; sourceTree = "<group>"; };
 		9BA409C11B8CCA0A008A18DB /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		9BA409C31B8CD1D6008A18DB /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		9BA409C51B8CD227008A18DB /* MyStudyTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStudyTableCell.swift; sourceTree = "<group>"; };
@@ -180,6 +186,9 @@
 		9BBBE2441B8D784900006A5A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				9B7AACAD1B8E038A006B900C /* haskell.jpeg */,
+				9B7AACAE1B8E038A006B900C /* ocaml1.jpg */,
+				9B7AACAF1B8E038A006B900C /* ocaml2.jpg */,
 				9BBBE2451B8D79A600006A5A /* book-cover-tick-7.png */,
 				9BBBE2461B8D79A600006A5A /* plus-simple-7.png */,
 				9BBBE2471B8D79A600006A5A /* search-7.png */,
@@ -298,7 +307,10 @@
 				9BBBE2491B8D79A600006A5A /* plus-simple-7.png in Resources */,
 				9B2090261B8CC0190078039F /* Main.storyboard in Resources */,
 				9BA409C21B8CCA0A008A18DB /* Launch Screen.xib in Resources */,
+				9B7AACB21B8E038A006B900C /* ocaml2.jpg in Resources */,
 				9BBBE2481B8D79A600006A5A /* book-cover-tick-7.png in Resources */,
+				9B7AACB11B8E038A006B900C /* ocaml1.jpg in Resources */,
+				9B7AACB01B8E038A006B900C /* haskell.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
