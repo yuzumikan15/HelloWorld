@@ -21,6 +21,11 @@ class  AddTableVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, 
 	lazy var authorField = UITextField()
 	lazy var urlField = UITextField()
 	lazy var reviewField = PlaceHolderTextView()
+	
+	lazy var cancelButton = UIButton()
+	lazy var addButton = UIButton()
+	
+	lazy var doneButtonView = UIView()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -71,6 +76,34 @@ class  AddTableVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, 
 		textField.font = UIFont(name: "Helvetica", size: 20)
 		textField.borderStyle = UITextBorderStyle.RoundedRect
 		textField.delegate = self
+	}
+	
+	func setupCancelButton() {
+		cancelButton.setTitle("Cancel", forState: .Normal)
+		cancelButton.setTitleColor(UIColor.redColor(), forState: .Normal)
+		cancelButton.addTarget(self, action: "backToMyStudyVC:", forControlEvents: .TouchUpInside)
+	}
+	
+	func backToMyStudyVC(sender: UIButton) {
+		self.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+		self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+	}
+	
+	func setupAddButton() {
+		addButton.setTitle("Add", forState: .Normal)
+		addButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
+		addButton.addTarget(self, action: "addTable:", forControlEvents: .TouchUpInside)
+	}
+	
+	func addTable(sender: UIButton) {
+		var newStudy = StudyData()
+		newStudy.category = categoryField.text
+//		TODO: String -> Level
+//		newStudy.level = levelButton.titleLabel?.text
+		newStudy.title = titleField.text
+		newStudy.author = authorField.text
+		newStudy.url = NSURL(string: urlField.text)
+		newStudy.review = reviewField.text
 	}
 	
 	func setupAutoLayout() {
