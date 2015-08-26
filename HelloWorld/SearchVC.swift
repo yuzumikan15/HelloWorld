@@ -17,6 +17,8 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
 	lazy var searchButton = UIButton()
 	lazy var tableview = UITableView(frame: CGRectZero)
 	
+	var filterdData: [StudyData]?
+	
 	init() {
 		super.init(nibName: nil, bundle: nil)
 		self.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Bookmarks, tag: 2)
@@ -38,15 +40,12 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
 	}
 	
 	func initTableview() {
-//		let frame = CGRectMake(0, 0, width, height)
-//		tableview = UITableView(frame: frame)
 		tableview.delegate = self
 		tableview.dataSource = self
 		tableview.registerClass(MyStudyTableCell.self, forCellReuseIdentifier: "studyCell")
 		
 		tableview.estimatedRowHeight = 120
 		tableview.rowHeight = UITableViewAutomaticDimension
-//		self.view.addSubview(tableview)
 	}
 	
 	func initSearchButton() {
@@ -62,6 +61,19 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
 		searchField.returnKeyType = UIReturnKeyType.Search
 		searchField.clearButtonMode = UITextFieldViewMode.WhileEditing
 		searchField.delegate = self
+	}
+	
+	func search(sender: UIButton) {
+		let query = searchField.text
+		let filterQuery = {
+			(data: StudyData) -> Bool in
+			data.category == query
+		}
+		if !(query == "") {
+			filterdData = studyData.filter(filterQuery)
+		}
+		
+		tableview.reloadData()
 	}
 	
 	func setupAutoLayout() {
@@ -98,22 +110,29 @@ extension  SearchVC: UITableViewDataSource {
 		
 		cell.initViews()
 		
-		let data = studyData[indexPath.row]
-		cell.categoryLabel.text = data.category
-		cell.levelLabel.text = data.level?.toString()
-		cell.titleLabel.text = data.title
-		cell.authorLabel.text = data.author
-		cell.urlLabel.text = data.url?.absoluteString
-		cell.reviewLabel.text = data.review
-		
-		cell.setupAutoLayout()
-		
-		cell.layoutIfNeeded()
+		if let fData = filterdData {
+			let data = fData[indexPath.row]
+			cell.categoryLabel.text = data.category
+			cell.levelLabel.text = data.level?.toString()
+			cell.titleLabel.text = data.title
+			cell.authorLabel.text = data.author
+			cell.urlLabel.text = data.url?.absoluteString
+			cell.reviewLabel.text = data.review
+			
+			cell.setupAutoLayout()
+			
+			cell.layoutIfNeeded()
+		}
 		return cell
 	}
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return studyData.count
+		if let fData = filterdData {
+			return fData.count
+		}
+		else {
+			return 0
+		}
 	}
 }
 
