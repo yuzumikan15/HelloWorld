@@ -28,7 +28,7 @@ class MyStudyVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
-		self.view.backgroundColor = UIColor.cyanColor()
+		self.view.backgroundColor = UIColor.whiteColor()
 		
 		
 		// setup tableview
@@ -78,5 +78,25 @@ extension MyStudyVC: UITableViewDataSource {
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return studyData.count
+	}
+	
+	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		let row = indexPath.row
+		let data = studyData[row]
+		let detailVC = BookDetailVC()
+		
+		detailVC.initViews()
+		
+		detailVC.categoryLabel.text = data.category
+		detailVC.levelLabel.text = data.level?.toString()
+		detailVC.titleLabel.text = data.title
+		detailVC.authorLabel.text = data.author
+		detailVC.urlLabel.text = data.url?.absoluteString
+		detailVC.reviewLabel.text = data.review
+		
+		detailVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+		detailVC.modalPresentationStyle = UIModalPresentationStyle.CurrentContext
+		self.presentViewController(detailVC, animated: true, completion: nil)
+
 	}
 }

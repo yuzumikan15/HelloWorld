@@ -25,7 +25,7 @@ class MyStudyTableCell: UITableViewCell {
 			bookImageView.image = image
 		}
 		else {
-			bookImageView.backgroundColor = UIColor.cyanColor()
+			bookImageView.backgroundColor = UIColor.grayColor()
 		}
 		
 		// labels
@@ -39,7 +39,7 @@ class MyStudyTableCell: UITableViewCell {
 	}
 	
 	func setupLabelFont(label: UILabel, fontsize: CGFloat, fontcolor: UIColor) {
-		label.numberOfLines = 0
+		label.numberOfLines = 2
 		label.lineBreakMode = NSLineBreakMode.ByWordWrapping
 		label.font = UIFont.systemFontOfSize(fontsize)
 		label.textColor = fontcolor

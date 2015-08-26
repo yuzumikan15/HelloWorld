@@ -18,6 +18,7 @@
 		9BA409C21B8CCA0A008A18DB /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BA409C11B8CCA0A008A18DB /* Launch Screen.xib */; };
 		9BA409C41B8CD1D6008A18DB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA409C31B8CD1D6008A18DB /* Data.swift */; };
 		9BA409C61B8CD227008A18DB /* MyStudyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA409C51B8CD227008A18DB /* MyStudyTableCell.swift */; };
+		9BBBE2431B8D272800006A5A /* BookDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBBE2421B8D272800006A5A /* BookDetailVC.swift */; };
 		CE30B6C414C274A9F4BCB7C1 /* Pods_HelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEDDE855311FEB6174E360F /* Pods_HelloWorld.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		9BA409C11B8CCA0A008A18DB /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		9BA409C31B8CD1D6008A18DB /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		9BA409C51B8CD227008A18DB /* MyStudyTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStudyTableCell.swift; sourceTree = "<group>"; };
+		9BBBE2421B8D272800006A5A /* BookDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailVC.swift; sourceTree = "<group>"; };
 		9DEDDE855311FEB6174E360F /* Pods_HelloWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8079D61A1219CACCFAB5711 /* Pods-HelloWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +136,7 @@
 				9B2090501B8CC51F0078039F /* SearchVC.swift */,
 				9B2090521B8CC52C0078039F /* MyStudyVC.swift */,
 				9BA409C51B8CD227008A18DB /* MyStudyTableCell.swift */,
+				9BBBE2421B8D272800006A5A /* BookDetailVC.swift */,
 				9B2090221B8CC0190078039F /* ViewController.swift */,
 				9B2090241B8CC0190078039F /* Main.storyboard */,
 				9B2090271B8CC0190078039F /* Assets.xcassets */,
@@ -346,6 +349,7 @@
 				9BA409C41B8CD1D6008A18DB /* Data.swift in Sources */,
 				9BA409C61B8CD227008A18DB /* MyStudyTableCell.swift in Sources */,
 				9B2090231B8CC0190078039F /* ViewController.swift in Sources */,
+				9BBBE2431B8D272800006A5A /* BookDetailVC.swift in Sources */,
 				9B2090531B8CC52C0078039F /* MyStudyVC.swift in Sources */,
 				9B2090211B8CC0190078039F /* AppDelegate.swift in Sources */,
 			);
