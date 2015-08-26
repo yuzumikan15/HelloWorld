@@ -59,7 +59,7 @@ class MyStudyTableCell: UITableViewCell {
 			"review": reviewLabel,
 			])
 		autolayout("H:|-p-[bookImage(==imageWidth)]-p-[category]")
-		autolayout("[level]-p-|")
+		autolayout("H:[level]-p-|")
 		autolayout("H:|-p-[bookImage(==imageWidth)]-p-[title]-p-|")
 		autolayout("H:|-p-[bookImage(==imageWidth)]-p-[author]-p-|")
 		autolayout("H:|-p-[bookImage(==imageWidth)]-p-[url]-p-|")

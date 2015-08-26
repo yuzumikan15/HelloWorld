@@ -15,6 +15,7 @@ class MyStudyVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	let height = UIScreen.mainScreen().bounds.height
 	
 	lazy var tableview = UITableView()
+	lazy var addButton = UIButton.buttonWithType(UIButtonType.Custom) as? UIButton
 	
 	init() {
 		super.init(nibName: nil, bundle: nil)
@@ -30,7 +31,12 @@ class MyStudyVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 		// Do any additional setup after loading the view, typically from a nib.
 		self.view.backgroundColor = UIColor.whiteColor()
 		
-		
+		setupTableview()
+		setupAddButton()
+		setupAutoLayout()
+	}
+	
+	func setupTableview() {
 		// setup tableview
 		let frame = CGRectMake(0, 20, width, height)
 		tableview = UITableView(frame: frame)
@@ -47,6 +53,31 @@ class MyStudyVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 		tableview.registerClass(MyStudyTableCell.self, forCellReuseIdentifier: "studyCell")
 		
 		self.view.addSubview(tableview)
+	}
+	
+	func setupAddButton() {
+		addButton?.setImage(UIImage(named: "plus-simple-7.png"), forState: .Normal)
+		addButton?.addTarget(self, action: "addTable:", forControlEvents: .TouchUpInside)
+		
+		// make the button circle
+		let buttonSize = height / 10
+		addButton?.frame = CGRectMake(0, 0, buttonSize, buttonSize)
+		addButton?.layer.cornerRadius = buttonSize / 2
+		addButton?.layer.borderColor = UIColor.grayColor().CGColor
+		addButton?.layer.borderWidth = 2.0
+	}
+	
+	func setupAutoLayout() {
+		let p: CGFloat = 8
+		let b: CGFloat = 60
+		let buttonSize = height / 10
+		if let _ = addButton {
+			let autolayout = view.northLayoutFormat(["p": p, "b": b, "buttonSize": buttonSize], [
+				"button": addButton!,
+				])
+			autolayout("H:[button(==buttonSize)]-p-|")
+			autolayout("V:[button(==buttonSize)]-b-|")
+		}
 	}
 	
 	override func didReceiveMemoryWarning() {

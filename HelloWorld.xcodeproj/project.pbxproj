@@ -19,6 +19,9 @@
 		9BA409C41B8CD1D6008A18DB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA409C31B8CD1D6008A18DB /* Data.swift */; };
 		9BA409C61B8CD227008A18DB /* MyStudyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA409C51B8CD227008A18DB /* MyStudyTableCell.swift */; };
 		9BBBE2431B8D272800006A5A /* BookDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBBE2421B8D272800006A5A /* BookDetailVC.swift */; };
+		9BBBE2481B8D79A600006A5A /* book-cover-tick-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BBBE2451B8D79A600006A5A /* book-cover-tick-7.png */; };
+		9BBBE2491B8D79A600006A5A /* plus-simple-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BBBE2461B8D79A600006A5A /* plus-simple-7.png */; };
+		9BBBE24A1B8D79A600006A5A /* search-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BBBE2471B8D79A600006A5A /* search-7.png */; };
 		CE30B6C414C274A9F4BCB7C1 /* Pods_HelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEDDE855311FEB6174E360F /* Pods_HelloWorld.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -59,6 +62,9 @@
 		9BA409C31B8CD1D6008A18DB /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		9BA409C51B8CD227008A18DB /* MyStudyTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStudyTableCell.swift; sourceTree = "<group>"; };
 		9BBBE2421B8D272800006A5A /* BookDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailVC.swift; sourceTree = "<group>"; };
+		9BBBE2451B8D79A600006A5A /* book-cover-tick-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "book-cover-tick-7.png"; path = "images/book-cover-tick-7.png"; sourceTree = "<group>"; };
+		9BBBE2461B8D79A600006A5A /* plus-simple-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "plus-simple-7.png"; path = "images/plus-simple-7.png"; sourceTree = "<group>"; };
+		9BBBE2471B8D79A600006A5A /* search-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "search-7.png"; path = "images/search-7.png"; sourceTree = "<group>"; };
 		9DEDDE855311FEB6174E360F /* Pods_HelloWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8079D61A1219CACCFAB5711 /* Pods-HelloWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +115,7 @@
 		9B2090141B8CC0190078039F = {
 			isa = PBXGroup;
 			children = (
+				9BBBE2441B8D784900006A5A /* images */,
 				9B20901F1B8CC0190078039F /* HelloWorld */,
 				9B2090341B8CC0190078039F /* HelloWorldTests */,
 				9B20903F1B8CC0190078039F /* HelloWorldUITests */,
@@ -162,6 +169,16 @@
 				9B2090421B8CC0190078039F /* Info.plist */,
 			);
 			path = HelloWorldUITests;
+			sourceTree = "<group>";
+		};
+		9BBBE2441B8D784900006A5A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				9BBBE2451B8D79A600006A5A /* book-cover-tick-7.png */,
+				9BBBE2461B8D79A600006A5A /* plus-simple-7.png */,
+				9BBBE2471B8D79A600006A5A /* search-7.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +288,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B2090281B8CC0190078039F /* Assets.xcassets in Resources */,
+				9BBBE24A1B8D79A600006A5A /* search-7.png in Resources */,
+				9BBBE2491B8D79A600006A5A /* plus-simple-7.png in Resources */,
 				9B2090261B8CC0190078039F /* Main.storyboard in Resources */,
 				9BA409C21B8CCA0A008A18DB /* Launch Screen.xib in Resources */,
+				9BBBE2481B8D79A600006A5A /* book-cover-tick-7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
